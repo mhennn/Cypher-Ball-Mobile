@@ -1,9 +1,11 @@
 import flet as ft
-from components import ShakeButton
-from components import QuestionBox
+from components import ShakeButton, QuestionBox, RequestAnswer
 
-def clicked_shake(e):
-    pass
+def clicked_shake(page, question_box):
+    request_answer = RequestAnswer()
+    answer = request_answer.retrieve_answer()
+    question_box.value = answer
+    page.update()
 
 def main(page: ft.Page):
     page.theme = ft.Theme(
@@ -12,18 +14,17 @@ def main(page: ft.Page):
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.vertical_alignment = ft.MainAxisAlignment.CENTER 
 
-    page.add(
-        QuestionBox(text_align="center",
+    box_question = QuestionBox(text_align="center",
                     border_color="white",
                     border_width=1,
                     border_radius=20,
-                    label="Ask ME")
-    )
+                    label="Ask ME",
+                    disabled=True)
     
+    page.add(box_question)
     page.add(
-        ShakeButton(content="Shake", on_click=clicked_shake, width=150, height=40)
+        ShakeButton(content="Shake", on_click=lambda e:clicked_shake(page, box_question), width=150, height=40)
     )
-
     page.update()
 
 ft.run(main)

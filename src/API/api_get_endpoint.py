@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import random
-from api_words_list import WORDS
+from .api_words import WORDS
 
 app = FastAPI(debug=True)
 
