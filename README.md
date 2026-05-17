@@ -1,9 +1,35 @@
+![ui_icon](/src/assets/icon.png)
+
 # CypherBall app
 
-## Run the app
+A mobile version of Cypher Ball — ask any random question and receive unexpected, fun answers in return. Inspired by the iconic 90’s Magic 8-Ball, it brings the same nostalgic randomness into a modern interactive experience.
 
-### uv
+Built as a Flet application, it’s simple, playful, and ready to try anytime you need a quick answer or a bit of digital fate.
 
+### IOS UI Interface
+![ios_ui_interface](/src/assets/ios_ui.jpg)
+
+### Application Setup
+> Environment
+```bash
+py -m venv .venv
+```
+
+```bash
+.venv\Scripts\activate
+```
+
+> Requirements Installation
+```bash
+pip install -r requirements.txt
+```
+
+> FastAPI Activation (Root Folder)
+```bash
+uvicorn src.API.api_get_endpoint:app --reload
+```
+
+### Run the application in different platform
 Run as a desktop app:
 ```bash
 flet run
@@ -19,49 +45,6 @@ Run as IOS app:
 flet run --ios
 ```
 
-For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/).
+###### Random Answers can be changed based on user purposes. This is just an example.
 
-## Build the app
-
-### Android
-
-```bash
-flet build apk -v
-```
-
-For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
-
-### iOS
-```bash
-flet build ipa -v
-```
-
-For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
-
-### macOS
-```bash
-flet build macos -v
-```
-
-For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
-
-### Linux
-```bash
-flet build linux -v
-```
-
-For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
-
-### Windows
-```bash
-flet build windows -v
-```
-
-For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
-
-### Web
-```bash
-flet build web -v
-```
-
-For more details on building Web app, refer to the [Web Packaging Guide](https://flet.dev/docs/publish/web/).
+> For more details on building Web app, refer to the [Web Packaging Guide](https://flet.dev/docs/publish/web/).
