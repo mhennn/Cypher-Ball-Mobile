@@ -46,5 +46,6 @@ flet run --ios
 ```
 
 ###### Random Answers can be changed based on developers/user purposes. This is just an example.
+###### It is important to run the backend [FastAPI] before running the FLET App
 
 > For more details on building Web app, refer to the [Web Packaging Guide](https://flet.dev/docs/publish/web/).
