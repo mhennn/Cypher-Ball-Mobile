@@ -45,6 +45,6 @@ Run as IOS app:
 flet run --ios
 ```
 
-###### Random Answers can be changed based on user purposes. This is just an example.
+###### Random Answers can be changed based on developers/user purposes. This is just an example.
 
 > For more details on building Web app, refer to the [Web Packaging Guide](https://flet.dev/docs/publish/web/).
