@@ -24,11 +24,6 @@ py -m venv .venv
 pip install -r requirements.txt
 ```
 
-> FastAPI Activation (Root Folder)
-```bash
-uvicorn src.API.api_get_endpoint:app --reload
-```
-
 ### Run the application in different platform
 Run as a desktop app:
 ```bash
@@ -43,6 +38,11 @@ flet run --web
 Run as IOS app:
 ```bash
 flet run --ios
+```
+
+Run as Android app:
+```bash
+flet run --android
 ```
 
 ###### Random Answers can be changed based on developers/user purposes. This is just an example.

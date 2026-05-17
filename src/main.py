@@ -1,5 +1,10 @@
 import flet as ft
+import threading
 from components import ShakeButton, QuestionBox, RequestAnswer
+from API import APIServer
+
+def run_server():
+    APIServer.run()
 
 def clicked_shake(page, question_box):
     request_answer = RequestAnswer()
@@ -27,4 +32,10 @@ def main(page: ft.Page):
     )
     page.update()
 
-ft.run(main)
+if __name__ == "__main__":
+    threading.Thread(
+        target=run_server,
+        daemon=True
+    ).start()
+    
+    ft.run(main)
